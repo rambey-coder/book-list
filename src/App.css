@@ -32,6 +32,14 @@
     justify-items: center;
 }
 
+.book-details {
+    min-height: 80vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: space-evenly;
+}
+
 .book {
     text-align: center;
     display: flex;
