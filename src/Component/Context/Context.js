@@ -16,20 +16,30 @@ const ContextProvider = ({ children }) => {
     const [favorites, setFavorites] = useState([])
     // console.log(favorites);
 
-    const addFav = (book) => {
-        const oldFav = [...favorites]
+    // const addFav = (book) => {
+    //     const oldFav = [...favorites]
 
-        const newFav = oldFav.concat(book) //merge two arrays 
+    //     const newFav = oldFav.concat(book) //merge two arrays 
 
-        setFavorites(newFav)
+    //     setFavorites(newFav)
+    // }
+
+    // const removeFav = id => {
+    //     const oldFav = [...favorites]
+
+    //     const newFav = oldFav.filter((book) => book.id !== id)
+
+    //     setFavorites(newFav)
+    // }
+
+    // Another method to set and remove favrites in relation to TME assesment
+
+    const addFav = (item) => {
+        setFavorites([...favorites, item])
     }
 
-    const removeFav = id => {
-        const oldFav = [...favorites]
-
-        const newFav = oldFav.filter((book) => book.id !== id)
-
-        setFavorites(newFav)
+    const removeFav = (id) => {
+        setFavorites(favorites.filter(item => item.id !== id))
     }
 
     return (
